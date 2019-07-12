@@ -65,34 +65,12 @@ elseif ($msg_type == 'sticker') {
       $mreply = array(
         'replyToken' => $replyToken,
         'messages' => array(
-          
-array(
-        'type' => 'flex',
-        'altText' => 'Sticker!!',
-        'contents' => array(
-        'type' => 'bubble',
-        'body' => array(
-          'type' => 'box',
-          'layout' => 'vertical',
-          'spacing' => 'md',
-          'contents' => array(
             array(
-              'type' => 'text',
-          'align' => 'center',
-          'color' => '#049b1b',
-          'text' => 'USER : ' . $reline2
-      ),
-            array(
-          'type' => 'image',
-          'size' => '5xl',
-          'align' => 'center',
-          'url' => $stickerurl
-      )
+                    "type": "image",
+                    "originalContentUrl": $stickerurl,
+                    "previewImageUrl": $stickerurl
+                )
         )
-        )
-        )
-        )
-    )
     );
 }
 else {
