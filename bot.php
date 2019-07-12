@@ -61,15 +61,38 @@ if ($msg_type == 'location') {
     );
 }
 elseif ($msg_type == 'sticker') {
-  $stickerurl = "https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80";
+  $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
       $mreply = array(
         'replyToken' => $replyToken,
         'messages' => array(
+          
+array(
+        'type' => 'flex',
+        'altText' => 'Sticker!!',
+        'contents' => array(
+        'type' => 'bubble',
+        'body' => array(
+          'type' => 'box',
+          'layout' => 'vertical',
+          'spacing' => 'md',
+          'contents' => array(
             array(
-                'type' => 'text',
-                'text' => 'USER : ' . $reline2
-            )
+              'type' => 'text',
+          'align' => 'center',
+          'color' => '#049b1b',
+          'text' => 'USER : ' . $reline2
+      ),
+            array(
+          'type' => 'image',
+          'size' => '5xl',
+          'align' => 'center',
+          'url' => $stickerurl
+      )
         )
+        )
+        )
+        )
+    )
     );
 }
 else {
