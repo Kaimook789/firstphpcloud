@@ -66,10 +66,9 @@ elseif ($msg_type == 'sticker') {
         'replyToken' => $replyToken,
         'messages' => array(
             array(
-                    "type": "image",
-                    "originalContentUrl": $stickerurl,
-                    "previewImageUrl": $stickerurl
-                )
+                "type": "text",
+                "text": "Hello, world"
+            )
         )
     );
 }
