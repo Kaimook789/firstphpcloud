@@ -60,6 +60,41 @@ if ($msg_type == 'location') {
         )
     );
 }
+elseif ($msg_type == 'sticker') {
+  $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
+      $mreply = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+          
+array(
+        'type' => 'flex',
+        'altText' => 'Sticker!!',
+        'contents' => array(
+        'type' => 'bubble',
+        'body' => array(
+          'type' => 'box',
+          'layout' => 'vertical',
+          'spacing' => 'md',
+          'contents' => array(
+            array(
+              'type' => 'text',
+          'align' => 'center',
+          'color' => '#049b1b',
+          'text' => 'USER : ' . $reline2
+      ),
+            array(
+          'type' => 'image',
+          'size' => '5xl',
+          'align' => 'center',
+          'url' => $stickerurl
+      )
+        )
+        )
+        )
+        )
+    )
+    );
+}
 else {
     $url = "https://bots.dialogflow.com/line/b215c49b-0b36-45b7-9db4-429ab4b0095a/webhook";
         $headers = getallheaders();
