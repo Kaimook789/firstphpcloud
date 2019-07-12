@@ -66,8 +66,8 @@ elseif ($msg_type == 'sticker') {
         'replyToken' => $replyToken,
         'messages' => array(
             array(
-                "type": "text",
-                "text": "Hello, world"
+                'type' => 'text',
+                'text' => 'USER : ' . $reline2
             )
         )
     );
