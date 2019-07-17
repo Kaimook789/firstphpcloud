@@ -63,152 +63,38 @@ if ($msg_type == 'location') {
 elseif ($msg_type == 'sticker')
  {
   $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
-
-      $mreply = array
-(
+  $mreply = array
+        (
         'replyToken' => $replyToken,
-        'messages' => array (
-  'type' => 'flex',
-  'altText' => 'Flex Message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'direction' => 'ltr',
-    'header' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => 'Purchase',
-          'size' => 'lg',
-          'align' => 'start',
-          'weight' => 'bold',
-          'color' => '#009813',
-        ),
-        1 => 
-        array (
-          'type' => 'text',
-          'text' => '฿ 100.00',
-          'size' => '3xl',
-          'weight' => 'bold',
-          'color' => '#000000',
-        ),
-        2 => 
-        array (
-          'type' => 'text',
-          'text' => 'Rabbit Line Pay',
-          'size' => 'lg',
-          'weight' => 'bold',
-          'color' => '#000000',
-        ),
-        3 => 
-        array (
-          'type' => 'text',
-          'text' => '2019.02.14 21:47 (GMT+0700)',
-          'size' => 'xs',
-          'color' => '#B2B2B2',
-        ),
-        4 => 
-        array (
-          'type' => 'text',
-          'text' => 'Payment complete.',
-          'margin' => 'lg',
-          'size' => 'lg',
-          'color' => '#000000',
-        ),
-      ),
-    ),
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'separator',
-          'color' => '#C3C3C3',
-        ),
-        1 => 
-        array (
-          'type' => 'box',
-          'layout' => 'baseline',
-          'margin' => 'lg',
-          'contents' => 
-          array (
-            0 => 
-            array (
-              'type' => 'text',
-              'text' => 'Merchant',
-              'align' => 'start',
-              'color' => '#C3C3C3',
-            ),
-            1 => 
-            array (
-              'type' => 'text',
-              'text' => 'BTS 01',
-              'align' => 'end',
-              'color' => '#000000',
-            ),
-          ),
-        ),
-        2 => 
-        array (
-          'type' => 'box',
-          'layout' => 'baseline',
-          'margin' => 'lg',
-          'contents' => 
-          array (
-            0 => 
-            array (
-              'type' => 'text',
-              'text' => 'New balance',
-              'color' => '#C3C3C3',
-            ),
-            1 => 
-            array (
-              'type' => 'text',
-              'text' => '฿ 45.57',
-              'align' => 'end',
-            ),
-          ),
-        ),
-        3 => 
-        array (
-          'type' => 'separator',
-          'margin' => 'lg',
-          'color' => '#C3C3C3',
-        ),
-      ),
-    ),
-    'footer' => 
-    array (
-      'type' => 'box',
-      'layout' => 'horizontal',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => 'View Details',
-          'size' => 'lg',
-          'align' => 'start',
-          'color' => '#0084B6',
-          'action' => 
-          array (
-            'type' => 'uri',
-            'label' => 'View Details',
-            'uri' => 'https://google.co.th/',
-          ),
-        ),
-      ),
-    ),
-  ),
-)
+        'messages' => array
+                    (         
+                        array(
+                        'type' => 'flex',
+                        'altText' => 'Sticker!!',
+                        'contents' => array(
+                                    'type' => 'bubble',
+                                    'body' => array(
+                                              'type' => 'box',
+                                              'layout' => 'vertical',
+                                              'spacing' => 'md',
+                                              'contents' => array(
+                                                                array(
+                                                                  'type' => 'text',
+                                                                  'align' => 'center',
+                                                                  'color' => '#049b1b',
+                                                                  'text' => 'USER : ' . $reline2
+                                                                ),
+                                                                array(
+                                                                  'type' => 'image',
+                                                                  'size' => '5xl',
+                                                                  'align' => 'center',
+                                                                  'url' => $stickerurl
+                                                                )
+                                                             )
+                                            )
+                                    )
+                        )
+                      )
 
     );
 }
