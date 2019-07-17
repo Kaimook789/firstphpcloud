@@ -73,25 +73,49 @@ elseif ($msg_type == 'sticker')
                         'altText' => 'Sticker!!',
                         'contents' => array(
                                     'type' => 'bubble',
-                                    'body' => array(
+                                    'body' => array
+                                     (
                                               'type' => 'box',
                                               'layout' => 'vertical',
                                               'spacing' => 'md',
-                                              'contents' => array(
-                                                                array(
-                                                                  'type' => 'text',
-                                                                  'align' => 'center',
-                                                                  'color' => '#049b1b',
-                                                                  'text' => 'USER : ' . $reline2
-                                                                ),
-                                                                array(
-                                                                  'type' => 'image',
-                                                                  'size' => '5xl',
-                                                                  'align' => 'center',
-                                                                  'url' => $stickerurl
-                                                                )
-                                                             )
+                                              'contents' => 
+                                                array(
+                                                    array(
+                                                      'type' => 'text',
+                                                      'align' => 'center',
+                                                      'color' => '#049b1b',
+                                                      'text' => 'USER : ' . $reline2
+                                                    ),
+                                                    array(
+                                                      'type' => 'image',
+                                                      'size' => '5xl',
+                                                      'align' => 'center',
+                                                      'url' => $stickerurl
+                                                    )
+                                                 )
+                                     ),
+                                    'footer' => array 
+                                     (
+                                            'type' => 'box',
+                                            'layout' => 'horizontal',
+                                            'contents' => 
+                                            array (
+                                              0 => 
+                                              array (
+                                                'type' => 'text',
+                                                'text' => 'View Details',
+                                                'size' => 'lg',
+                                                'align' => 'start',
+                                                'color' => '#0084B6',
+                                                'action' => 
+                                                array (
+                                                  'type' => 'uri',
+                                                  'label' => 'View Details',
+                                                  'uri' => 'https://google.co.th/',
+                                                )
+                                              )
                                             )
+                                          )
                                     )
                         )
                       )
