@@ -97,7 +97,7 @@ if ($msg_type == 'location') {
                                                         0 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => 'Date',
+                                                          'text' => 'ที่ตั้ง',
                                                           'color' => '#aaaaaa',
                                                           'size' => 'sm',
                                                           'flex' => 1,
@@ -123,7 +123,7 @@ if ($msg_type == 'location') {
                                                         0 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => 'Place',
+                                                          'text' => 'ละติจูด',
                                                           'color' => '#aaaaaa',
                                                           'size' => 'sm',
                                                           'flex' => 1,
@@ -149,7 +149,7 @@ if ($msg_type == 'location') {
                                                         0 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => 'Seats',
+                                                          'text' => 'ลองจิจูด',
                                                           'color' => '#aaaaaa',
                                                           'size' => 'sm',
                                                           'flex' => 1,
