@@ -71,54 +71,62 @@ elseif ($msg_type == 'sticker')
                               array(
                               'type' => 'flex',
                               'altText' => 'Sticker!!',
-                              'contents' =>array (
-                                          'type' => 'bubble',
-                                          'header' =>
-                                          array (
-                                          'type' => 'box',
-                                          'layout' => 'vertical',
-                                          'contents' =>
-                                          array (
-                                              0 =>
-                                              array (
-                                              'type' => 'text',
-                                              'text' => 'header',
+                              'contents' =>
+                                            array (
+                                              'type' => 'bubble',
+                                              'header' =>
+                                                          array (
+                                                          'type' => 'box',
+                                                          'layout' => 'vertical',
+                                                          'contents' =>
+                                                                      array (
+                                                                          0 =>
+                                                                          array (
+                                                                          'type' => 'text',
+                                                                          'text' => 'header',
+                                                                          ),
+                                                                      ),
+                                                          ),
+                                              'hero' =>
+                                                          array (
+                                                          'type' => 'image',
+                                                          'url' => $stickerurl,
+                                                          'size' => 'full',
+                                                          'aspectRatio' => '2:1',
+                                                          ),
+                                              'body' =>
+                                                          array (
+                                                          'type' => 'box',
+                                                          'layout' => 'vertical',
+                                                          'contents' =>
+                                                                      array (
+                                                                          0 =>
+                                                                          array (
+                                                                          'type' => 'text',
+                                                                          'text' => 'body',
+                                                                          ),
+                                                          ),
                                               ),
-                                          ),
-                                          ),
-                                          'hero' =>
-                                          array (
-                                          'type' => 'image',
-                                          'url' => $stickerurl,
-                                          'size' => 'full',
-                                          'aspectRatio' => '2:1',
-                                          ),
-                                          'body' =>
-                                          array (
-                                          'type' => 'box',
-                                          'layout' => 'vertical',
-                                          'contents' =>
-                                          array (
-                                              0 =>
-                                              array (
-                                              'type' => 'text',
-                                              'text' => 'body',
+                                              'footer' =>
+                                                          array (
+                                                          'type' => 'box',
+                                                          'layout' => 'vertical',
+                                                          'spacing' => 'md',
+                                                          'contents' =>
+                                                                      array (
+                                                                          0 =>
+                                                                          array (
+                                                                          'type' => 'button',
+                                                                          'style'=> 'primary',
+                                                                          'action' => 
+                                                                                    array(
+                                                                                    'type'=> "uri",
+                                                                                    'label'=> "Primary style button",
+                                                                                    'uri'=> 'https://google.com'
+                                                                                    ),
+                                                                          ),
+                                                          ),
                                               ),
-                                          ),
-                                          ),
-                                          'footer' =>
-                                          array (
-                                          'type' => 'box',
-                                          'layout' => 'vertical',
-                                          'contents' =>
-                                          array (
-                                              0 =>
-                                              array (
-                                              'type' => 'text',
-                                              'text' => 'footer',
-                                              ),
-                                          ),
-                                          ),
                                       )
                               )
                           )
