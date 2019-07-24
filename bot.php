@@ -70,29 +70,15 @@ elseif ($msg_type == 'sticker')
                           (
                               array(
                               'type' => 'flex',
-                              'altText' => 'Sticker!!',
+                              'altText' => 'Rainfall in your location',
                               'contents' =>
                                             array (
                                               'type' => 'bubble',
-                                              'header' =>
-                                                          array (
-                                                          'type' => 'box',
-                                                          'layout' => 'vertical',
-                                                          'contents' =>
-                                                                      array (
-                                                                          0 =>
-                                                                          array (
-                                                                          'type' => 'text',
-                                                                          'text' => 'header',
-                                                                          ),
-                                                                      ),
-                                                          ),
                                               'hero' =>
                                                           array (
                                                           'type' => 'image',
                                                           'url' => $stickerurl,
-                                                          'size' => 'full',
-                                                          'aspectRatio' => '2:1',
+                                                          'size' => 'full'
                                                           ),
                                               'body' =>
                                                           array (
@@ -118,10 +104,10 @@ elseif ($msg_type == 'sticker')
                                                                           array (
                                                                           'type' => 'button',
                                                                           'style'=> 'primary',
-                                                                          'action' => 
+                                                                          'action' =>
                                                                                     array(
                                                                                     'type'=> "uri",
-                                                                                    'label'=> "Primary style button",
+                                                                                    'label'=> "View",
                                                                                     'uri'=> 'https://google.com'
                                                                                     ),
                                                                           ),
