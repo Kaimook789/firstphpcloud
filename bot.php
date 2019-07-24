@@ -46,22 +46,6 @@ $reline1 = json_decode($reline, true);
 $reline2 = $reline1['displayName'];
 #-------------------------[MSG TYPE]-------------------------#
 if ($msg_type == 'location') {
-    $text = "Reply location";
-    $mreply = array(
-      'replyToken' => $replyToken,
-      'messages' => array(
-          array(
-              'type' => 'location',
-              'title' => $msg_title,
-              'address' => $msg_address,
-              'latitude' => $msg_latitude,
-              'longitude' => $msg_longitude
-          )
-      )
-  );
-}
-elseif ($msg_type == 'sticker')
-{
     $stickerurl = "https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80";
     $mreply = array
           (
@@ -70,7 +54,7 @@ elseif ($msg_type == 'sticker')
                (
                         array(
                         'type' => 'flex',
-                        'altText' => 'Sticker!!',
+                        'altText' => 'Rainfall your location.',
                         'contents' => array(
                                     'type' => 'bubble',
                                     'body' => array
@@ -86,9 +70,21 @@ elseif ($msg_type == 'sticker')
                                                 ),
                                                 array(
                                                     'type' => 'text',
-                                                    'align' => 'center',
+                                                    'align' => 'start',
                                                     'color' => '#049b1b',
-                                                    'text' => 'location : '
+                                                    'text' => 'address : '.$msg_address
+                                                ),
+                                                array(
+                                                    'type' => 'text',
+                                                    'align' => 'start',
+                                                    'color' => '#049b1b',
+                                                    'text' => 'latitude : '.$msg_latitude
+                                                ),
+                                                array(
+                                                    'type' => 'text',
+                                                    'align' => 'start',
+                                                    'color' => '#049b1b',
+                                                    'text' => 'longitude : '.$msg_longitude
                                                 )
                                              )
                                      ),
