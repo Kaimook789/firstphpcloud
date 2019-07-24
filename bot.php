@@ -65,25 +65,26 @@ if ($msg_type == 'location') {
                                              array(
                                                 array(
                                                     'type' => 'image',
-                                                    'size' => 'full',
+                                                    'size' => 'fit',
                                                     'url' => $stickerurl
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#049b1b',
-                                                    'text' => 'address : '.$msg_address
+                                                    'color' => '#565A5C',
+                                                    'text' => 'address : '.$msg_address,
+                                                    'wrap' => 'true'
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#049b1b',
+                                                    'color' => '#565A5C',
                                                     'text' => 'latitude : '.$msg_latitude
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#049b1b',
+                                                    'color' => '#565A5C',
                                                     'text' => 'longitude : '.$msg_longitude
                                                 )
                                              )
