@@ -64,24 +64,40 @@ if ($msg_type == 'location') {
                                             'layout' => 'vertical',
                                             'contents' =>
                                              array(
-                                                //array(
-                                                //    'type' => 'image',
-                                                //    'size' => 'full',
-                                                //    'url' => $stickerurl
-                                                //),
-                                                //array(
-                                                //    'type' => 'separator'
-                                                //),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
+                                                    'size' => 'lg',
+                                                    'wrap' => true,
+                                                    'color'=> '#565A5C',
+                                                    'text' => 'ตำแหน่งปริมาณน้ำฝน'
+                                                ),
+                                                array(
+                                                    'type' => 'separator'
+                                                ),
+                                                array(
+                                                    'type' => 'image',
+                                                    'size' => 'full',
+                                                    'url' => $stickerurl
+                                                ),
+                                                array(
+                                                    'type' => 'separator'
+                                                ),
+                                                array(
+                                                    'type' => 'text',
+                                                    'align' => 'start',
+                                                    'size' => 'sm',
                                                     'wrap' => true,
                                                     'color'=> '#565A5C',
                                                     'text' => 'Address : '.$msg_address
                                                 ),
                                                 array(
+                                                    'type' => 'separator'
+                                                ),
+                                                array(
                                                     'type' => 'text',
                                                     'align' => 'start',
+                                                    'size' => 'sm',
                                                     'color'=> '#565A5C',
                                                     'text' => 'Latitude : '.$msg_latitude
                                                 ),
@@ -89,6 +105,7 @@ if ($msg_type == 'location') {
                                                     'type' => 'text',
                                                     'align' => 'start',
                                                     'color'=> '#565A5C',
+                                                    'size' => 'sm',
                                                     'text' => 'Longitude : '.$msg_longitude
                                                 )
                                              )
@@ -106,7 +123,7 @@ if ($msg_type == 'location') {
                                                 'action' =>
                                                         array (
                                                           'type' => 'uri',
-                                                          'label' => 'View Details',
+                                                          'label' => 'ดูปริมาณน้ำฝน',
                                                           'uri' => $Linkurl,
                                                         )
                                               )
