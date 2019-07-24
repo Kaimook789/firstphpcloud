@@ -46,105 +46,108 @@ $reline1 = json_decode($reline, true);
 $reline2 = $reline1['displayName'];
 #-------------------------[MSG TYPE]-------------------------#
 if ($msg_type == 'location') {
-      $text = "Reply location";
-      $mreply = array(
-        'replyToken' => $replyToken,
-        'messages' => array(
-            array(
-                'type' => 'location',
-                'title' => $msg_title,
-                'address' => $msg_address,
-                'latitude' => $msg_latitude,
-                'longitude' => $msg_longitude
-            )
-        )
-    );
+    $text = "Reply location";
+    $mreply = array(
+      'replyToken' => $replyToken,
+      'messages' => array(
+          array(
+              'type' => 'location',
+              'title' => $msg_title,
+              'address' => $msg_address,
+              'latitude' => $msg_latitude,
+              'longitude' => $msg_longitude
+          )
+      )
+  );
 }
 elseif ($msg_type == 'sticker')
- {
-  $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
-  $mreply = array
-        (
-        'replyToken' => $replyToken,
-        'messages' => array
-                    (         
-                        array(
-                        'type' => 'flex',
-                        'altText' => 'Sticker!!',
-                        'contents' => array(
-                                    'type' => 'bubble',
-                                    'body' => array
-                                     (
-                                              'type' => 'box',
-                                              'layout' => 'vertical',
-                                              'spacing' => 'md',
-                                              'contents' => 
-                                                array(
-                                                    array(
-                                                      'type' => 'text',
-                                                      'align' => 'center',
-                                                      'color' => '#049b1b',
-                                                      'text' => 'USER : ' . $reline2
-                                                    ),
-                                                    array(
-                                                      'type' => 'image',
-                                                      'size' => '5xl',
-                                                      'align' => 'center',
-                                                      'url' => $stickerurl
-                                                    )
-                                                 )
-                                     ),
-                                    'footer' => array 
-                                     (
-                                            'type' => 'box',
-                                            'layout' => 'horizontal',
-                                            'contents' => 
-                                            array (
-                                              0 => 
+{
+    $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
+    $mreply = array
+          (
+              'replyToken' => $replyToken,
+              'messages' => array
+                          (
+                              array(
+                              'type' => 'flex',
+                              'altText' => 'Sticker!!',
+                              'contents' =>array (
+                                          'type' => 'bubble',
+                                          'header' =>
+                                          array (
+                                          'type' => 'box',
+                                          'layout' => 'vertical',
+                                          'contents' =>
+                                          array (
+                                              0 =>
                                               array (
-                                                'type' => 'text',
-                                                'text' => 'View Details',
-                                                'size' => 'lg',
-                                                'align' => 'start',
-                                                'color' => '#0084B6',
-                                                'action' => 
-                                                array (
-                                                  'type' => 'uri',
-                                                  'label' => 'View Details',
-                                                  'uri' => 'https://google.co.th/',
-                                                )
-                                              )
-                                            )
-                                          )
-                                    )
-                        )
-                      )
+                                              'type' => 'text',
+                                              'text' => 'header',
+                                              ),
+                                          ),
+                                          ),
+                                          'hero' =>
+                                          array (
+                                          'type' => 'image',
+                                          'url' => $stickerurl,
+                                          'size' => 'full',
+                                          'aspectRatio' => '2:1',
+                                          ),
+                                          'body' =>
+                                          array (
+                                          'type' => 'box',
+                                          'layout' => 'vertical',
+                                          'contents' =>
+                                          array (
+                                              0 =>
+                                              array (
+                                              'type' => 'text',
+                                              'text' => 'body',
+                                              ),
+                                          ),
+                                          ),
+                                          'footer' =>
+                                          array (
+                                          'type' => 'box',
+                                          'layout' => 'vertical',
+                                          'contents' =>
+                                          array (
+                                              0 =>
+                                              array (
+                                              'type' => 'text',
+                                              'text' => 'footer',
+                                              ),
+                                          ),
+                                          ),
+                                      )
+                              )
+                          )
 
-    );
+          );
 }
 else {
     $url = "https://bots.dialogflow.com/line/b215c49b-0b36-45b7-9db4-429ab4b0095a/webhook";
-        $headers = getallheaders();
-        file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));
-        file_put_contents('body.txt',file_get_contents('php://input'));
-        $headers['Host'] = "bots.dialogflow.com";
-        $json_headers = array();
-        foreach($headers as $k=>$v){
-            $json_headers[]=$k.":".$v;
-        }
-        $inputJSON = file_get_contents('php://input');
-        $ch = curl_init();
-        curl_setopt( $ch, CURLOPT_URL, $url);
-        curl_setopt( $ch, CURLOPT_POST, 1);
-        curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true);
-        curl_setopt( $ch, CURLOPT_POSTFIELDS, $inputJSON);
-        curl_setopt( $ch, CURLOPT_HTTPHEADER, $json_headers);
-        curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 1);
-        curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-        $result = curl_exec( $ch );
-        curl_close( $ch );
+    $headers = getallheaders();
+    file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));
+    file_put_contents('body.txt',file_get_contents('php://input'));
+    $headers['Host'] = "bots.dialogflow.com";
+    $json_headers = array();
+    foreach($headers as $k=>$v){
+        $json_headers[]=$k.":".$v;
+    }
+    $inputJSON = file_get_contents('php://input');
+    $ch = curl_init();
+    curl_setopt( $ch, CURLOPT_URL, $url);
+    curl_setopt( $ch, CURLOPT_POST, 1);
+    curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true);
+    curl_setopt( $ch, CURLOPT_POSTFIELDS, $inputJSON);
+    curl_setopt( $ch, CURLOPT_HTTPHEADER, $json_headers);
+    curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 2);
+    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 1);
+    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec( $ch );
+    curl_close( $ch );
 }
 if (isset($mreply)) {
     $result = json_encode($mreply);
