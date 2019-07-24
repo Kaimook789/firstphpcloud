@@ -47,6 +47,7 @@ $reline2 = $reline1['displayName'];
 #-------------------------[MSG TYPE]-------------------------#
 if ($msg_type == 'location') {
     $stickerurl = "https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80";
+    $Linkurl="https://www.ventusky.com/?p=".$msg_latitude.";".$msg_longitude.";10&l=rain-3h";
     $mreply = array
           (
               'replyToken' => $replyToken,
@@ -63,14 +64,14 @@ if ($msg_type == 'location') {
                                             'layout' => 'vertical',
                                             'contents' =>
                                              array(
-                                                array(
-                                                    'type' => 'image',
-                                                    'size' => 'full',
-                                                    'url' => $stickerurl
-                                                ),
-                                                array(
-                                                    'type' => 'separator'
-                                                ),
+                                                //array(
+                                                //    'type' => 'image',
+                                                //    'size' => 'full',
+                                                //    'url' => $stickerurl
+                                                //),
+                                                //array(
+                                                //    'type' => 'separator'
+                                                //),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
@@ -106,7 +107,7 @@ if ($msg_type == 'location') {
                                                         array (
                                                           'type' => 'uri',
                                                           'label' => 'View Details',
-                                                          'uri' => 'https://www.ventusky.com',
+                                                          'uri' => $Linkurl,
                                                         )
                                               )
                                             )
