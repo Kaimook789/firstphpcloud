@@ -67,51 +67,54 @@ elseif ($msg_type == 'sticker')
           (
               'replyToken' => $replyToken,
               'messages' => array
-                          (
-                              array(
-                              'type' => 'flex',
-                              'altText' => 'Rainfall in your location',
-                              'contents' =>
-                                            array (
-                                                  'type' => 'bubble',
-                                                  'body' =>
-                                                  array (
-                                                    'type' => 'box',
-                                                    'layout' => 'vertical',
-                                                    'contents' =>
-                                                    array (
-                                                      0 =>
-                                                      array (
-                                                        'type' => 'image',
-                                                        'url' => $stickerurl,
-                                                        'size' => 'full',
-                                                      ),
+               (
+                        array(
+                        'type' => 'flex',
+                        'altText' => 'Sticker!!',
+                        'contents' => array(
+                                    'type' => 'bubble',
+                                    'body' => array
+                                     (
+                                              'type' => 'box',
+                                              'layout' => 'vertical',
+                                              'contents' =>
+                                                array(
+                                                    array(
+                                                      'type' => 'text',
+                                                      'align' => 'center',
+                                                      'color' => '#049b1b',
+                                                      'text' => 'USER : ' . $reline2
                                                     ),
-                                                  ),
-                                                  'footer' =>
-                                                  array (
-                                                    'type' => 'box',
-                                                    'layout' => 'vertical',
-                                                    'contents' =>
-                                                    array (
-                                                      0 =>
-                                                      array (
-                                                        'type' => 'button',
-                                                        'action' =>
+                                                    array(
+                                                      'type' => 'image',
+                                                      'size' => '5xl',
+                                                      'align' => 'center',
+                                                      'url' => $stickerurl
+                                                    )
+                                                 )
+                                     ),
+                                    'footer' => array
+                                     (
+                                            'type' => 'box',
+                                            'layout' => 'vertical',
+                                            'contents' =>
+                                            array (
+                                              0 =>
+                                              array (
+                                                'type' => 'button',
+                                                'style' => 'primary',
+                                                'action' =>
                                                         array (
                                                           'type' => 'uri',
-                                                          'label' => 'View',
-                                                          'uri' => 'https://google.com',
-                                                        ),
-                                                        'style' => 'primary',
-                                                        'color' => '#0000ff',
-                                                      ),
-                                                    ),
-                                                  ),
-                                                )
-                                      )
-                              )
-                          )
+                                                          'label' => 'View Details',
+                                                          'uri' => 'https://google.co.th/',
+                                                        )
+                                              )
+                                            )
+                                          )
+                                    )
+                        )
+                      )
 
           );
 }
