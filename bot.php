@@ -75,11 +75,11 @@ if ($msg_type == 'location') {
                                                 array(
                                                     'type' => 'separator'
                                                 ),
-                                                array(
-                                                    'type' => 'image',
-                                                    'size' => 'full',
-                                                    'url' => $stickerurl
-                                                ),
+                                                ////array(
+                                                ////    'type' => 'image',
+                                                ////    'size' => 'full',
+                                                ////    'url' => $stickerurl
+                                                ////),
                                                 array(
                                                     'type' => 'separator'
                                                 ),
@@ -107,17 +107,8 @@ if ($msg_type == 'location') {
                                                     'color'=> '#565A5C',
                                                     'size' => 'sm',
                                                     'text' => 'Longitude : '.$msg_longitude
-                                                )
-                                             )
-                                     ),
-                                    'footer' => array
-                                     (
-                                            'type' => 'box',
-                                            'layout' => 'vertical',
-                                            'contents' =>
-                                            array (
-                                              0 =>
-                                              array (
+                                                ),
+                                                array (
                                                 'type' => 'button',
                                                 'style' => 'primary',
                                                 'action' =>
@@ -126,10 +117,29 @@ if ($msg_type == 'location') {
                                                           'label' => 'ดูปริมาณน้ำฝน',
                                                           'uri' => $Linkurl,
                                                         )
-                                              )
-                                            )
-                                          )
-                                    )
+                                                 )
+                                             )
+                                     )//,
+                                    //'footer' => array
+                                    // (
+                                    //        'type' => 'box',
+                                    //        'layout' => 'vertical',
+                                    //        'contents' =>
+                                    //        array (
+                                    //          0 =>
+                                    //          array (
+                                    //            'type' => 'button',
+                                    //            'style' => 'primary',
+                                    //            'action' =>
+                                    //                    array (
+                                    //                      'type' => 'uri',
+                                    //                      'label' => 'ดูปริมาณน้ำฝน',
+                                    //                      'uri' => $Linkurl,
+                                    //                    )
+                                    //          )
+                                    //        )
+                                    //      )
+                                    //)
                         )
                       )
 
