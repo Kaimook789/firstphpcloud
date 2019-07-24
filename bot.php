@@ -75,19 +75,19 @@ if ($msg_type == 'location') {
                                                     'type' => 'text',
                                                     'align' => 'start',
                                                     'wrap' => true,
-                                                    'color'=> '#0000ff',
+                                                    'color'=> '#565A5C',
                                                     'text' => 'Address : '.$msg_address
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color'=> '#0000ff',
+                                                    'color'=> '#565A5C',
                                                     'text' => 'Latitude : '.$msg_latitude
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color'=> '#0000ff',
+                                                    'color'=> '#565A5C',
                                                     'text' => 'Longitude : '.$msg_longitude
                                                 )
                                              )
@@ -106,7 +106,7 @@ if ($msg_type == 'location') {
                                                         array (
                                                           'type' => 'uri',
                                                           'label' => 'View Details',
-                                                          'uri' => 'https://www.ventusky.com/?p='.$msg_latitude.';'.$msg_longitude+';10&l=rain-3h',
+                                                          'uri' => 'https://www.ventusky.com',
                                                         )
                                               )
                                             )
