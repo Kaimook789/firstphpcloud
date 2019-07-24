@@ -73,7 +73,7 @@ if ($msg_type == 'location') {
                                                     'align' => 'start',
                                                     'color' => '#565A5C',
                                                     'text' => 'address : '.$msg_address,
-                                                    'wrap' => 'true'
+                                                    'wrap' => true
                                                 ),
                                                 array(
                                                     'type' => 'text',
