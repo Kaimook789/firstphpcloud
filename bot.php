@@ -66,24 +66,29 @@ if ($msg_type == 'location') {
                                                 array(
                                                     'type' => 'image',
                                                     'size' => 'full',
-                                                    'aspectRatio' => '2:1',
                                                     'url' => $stickerurl
+                                                ),
+                                                array(
+                                                    'type' => 'separator'
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
                                                     'wrap' => true,
-                                                    'text' => 'address : '.$msg_address
+                                                    'color'=> '#0000ff',
+                                                    'text' => 'Address : '.$msg_address
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'text' => 'latitude : '.$msg_latitude
+                                                    'color'=> '#0000ff',
+                                                    'text' => 'Latitude : '.$msg_latitude
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'text' => 'longitude : '.$msg_longitude
+                                                    'color'=> '#0000ff',
+                                                    'text' => 'Longitude : '.$msg_longitude
                                                 )
                                              )
                                      ),
