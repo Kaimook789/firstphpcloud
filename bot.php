@@ -106,7 +106,7 @@ if ($msg_type == 'location') {
                                                         array (
                                                           'type' => 'uri',
                                                           'label' => 'View Details',
-                                                          'uri' => 'https://google.co.th/',
+                                                          'uri' => 'https://www.ventusky.com/?p='.$msg_latitude +';'.$msg_longitude+';10&l=rain-3h',
                                                         )
                                               )
                                             )
