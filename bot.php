@@ -83,8 +83,8 @@ elseif ($msg_type == 'sticker')
                                                                       'type' => 'image',
                                                                       'url' => $stickerurl,
                                                                       'size' => 'full'
-                                                                      ),
-                                                          ),
+                                                                      )
+                                                          )
                                               ),
                                               'footer' =>
                                                           array (
