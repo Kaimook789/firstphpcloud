@@ -105,7 +105,7 @@ if ($msg_type == 'location') {
                                                         1 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => 'Monday 25, 9:00PM',
+                                                          'text' => ''.$msg_address,
                                                           'wrap' => true,
                                                           'size' => 'sm',
                                                           'color' => '#666666',
@@ -131,7 +131,7 @@ if ($msg_type == 'location') {
                                                         1 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => '7 Floor, No.3',
+                                                          'text' => ''.$msg_latitude,
                                                           'wrap' => true,
                                                           'color' => '#666666',
                                                           'size' => 'sm',
@@ -157,7 +157,7 @@ if ($msg_type == 'location') {
                                                         1 =>
                                                         array (
                                                           'type' => 'text',
-                                                          'text' => 'C Row, 18 Seat',
+                                                          'text' => ''.$msg_longitude,
                                                           'wrap' => true,
                                                           'color' => '#666666',
                                                           'size' => 'sm',
