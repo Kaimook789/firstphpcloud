@@ -80,35 +80,103 @@ if ($msg_type == 'location') {
                                                 ////    'size' => 'full',
                                                 ////    'url' => $stickerurl
                                                 ////),
-                                                array(
-                                                    'type' => 'separator'
-                                                ),
-                                                array(
-                                                    'type' => 'text',
-                                                    'align' => 'start',
-                                                    'size' => 'sm',
-                                                    'wrap' => true,
-                                                    'color'=> '#565A5C',
-                                                    'text' => 'Address : '.$msg_address
-                                                ),
-                                                array(
-                                                    'type' => 'separator'
-                                                ),
-                                                array(
-                                                    'type' => 'text',
-                                                    'align' => 'start',
-                                                    'size' => 'sm',
-                                                    'color'=> '#565A5C',
-                                                    'text' => 'Latitude : '.$msg_latitude
-                                                ),
-                                                array(
-                                                    'type' => 'text',
-                                                    'align' => 'start',
-                                                    'color'=> '#565A5C',
-                                                    'size' => 'sm',
-                                                    'text' => 'Longitude : '.$msg_longitude
-                                                ),
                                                 array (
+                                                  'type' => 'box',
+                                                  'layout' => 'vertical',
+                                                  'margin' => 'lg',
+                                                  'spacing' => 'sm',
+                                                  'contents' =>
+                                                  array (
+                                                    0 =>
+                                                    array (
+                                                      'type' => 'box',
+                                                      'layout' => 'baseline',
+                                                      'spacing' => 'sm',
+                                                      'contents' =>
+                                                      array (
+                                                        0 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => 'Date',
+                                                          'color' => '#aaaaaa',
+                                                          'size' => 'sm',
+                                                          'flex' => 1,
+                                                        ),
+                                                        1 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => 'Monday 25, 9:00PM',
+                                                          'wrap' => true,
+                                                          'size' => 'sm',
+                                                          'color' => '#666666',
+                                                          'flex' => 4,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    1 =>
+                                                    array (
+                                                      'type' => 'box',
+                                                      'layout' => 'baseline',
+                                                      'spacing' => 'sm',
+                                                      'contents' =>
+                                                      array (
+                                                        0 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => 'Place',
+                                                          'color' => '#aaaaaa',
+                                                          'size' => 'sm',
+                                                          'flex' => 1,
+                                                        ),
+                                                        1 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => '7 Floor, No.3',
+                                                          'wrap' => true,
+                                                          'color' => '#666666',
+                                                          'size' => 'sm',
+                                                          'flex' => 4,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    2 =>
+                                                    array (
+                                                      'type' => 'box',
+                                                      'layout' => 'baseline',
+                                                      'spacing' => 'sm',
+                                                      'contents' =>
+                                                      array (
+                                                        0 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => 'Seats',
+                                                          'color' => '#aaaaaa',
+                                                          'size' => 'sm',
+                                                          'flex' => 1,
+                                                        ),
+                                                        1 =>
+                                                        array (
+                                                          'type' => 'text',
+                                                          'text' => 'C Row, 18 Seat',
+                                                          'wrap' => true,
+                                                          'color' => '#666666',
+                                                          'size' => 'sm',
+                                                          'flex' => 4,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                             )
+                                     ),
+                                    'footer' => array
+                                     (
+                                            'type' => 'box',
+                                            'layout' => 'vertical',
+                                            'contents' =>
+                                            array (
+                                              0 =>
+                                              array (
                                                 'type' => 'button',
                                                 'style' => 'primary',
                                                 'action' =>
@@ -117,28 +185,9 @@ if ($msg_type == 'location') {
                                                           'label' => 'ดูปริมาณน้ำฝน',
                                                           'uri' => $Linkurl,
                                                         )
-                                                 )
-                                             )
-                                     )//,
-                                    //'footer' => array
-                                    // (
-                                    //        'type' => 'box',
-                                    //        'layout' => 'vertical',
-                                    //        'contents' =>
-                                    //        array (
-                                    //          0 =>
-                                    //          array (
-                                    //            'type' => 'button',
-                                    //            'style' => 'primary',
-                                    //            'action' =>
-                                    //                    array (
-                                    //                      'type' => 'uri',
-                                    //                      'label' => 'ดูปริมาณน้ำฝน',
-                                    //                      'uri' => $Linkurl,
-                                    //                    )
-                                    //          )
-                                    //        )
-                                    // )
+                                              )
+                                            )
+                                     )
                                  )
                         )
                       )
