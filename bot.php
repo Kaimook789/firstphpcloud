@@ -62,7 +62,7 @@ if ($msg_type == 'location') {
 }
 elseif ($msg_type == 'sticker')
 {
-    $stickerurl = "https://stickershop.line-scdn.net/stickershop/v1/sticker/" . $stickerId . "/android/sticker.png";
+    $stickerurl = "https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80";
     $mreply = array
           (
               'replyToken' => $replyToken,
