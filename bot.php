@@ -65,26 +65,24 @@ if ($msg_type == 'location') {
                                              array(
                                                 array(
                                                     'type' => 'image',
-                                                    'size' => 'fit',
+                                                    'size' => 'full',
+                                                    'aspectRatio' => '2:1',
                                                     'url' => $stickerurl
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#565A5C',
-                                                    'text' => 'address : '.$msg_address,
-                                                    'wrap' => true
+                                                    'wrap' => true,
+                                                    'text' => 'address : '.$msg_address
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#565A5C',
                                                     'text' => 'latitude : '.$msg_latitude
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'start',
-                                                    'color' => '#565A5C',
                                                     'text' => 'longitude : '.$msg_longitude
                                                 )
                                              )
