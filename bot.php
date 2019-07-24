@@ -73,39 +73,42 @@ elseif ($msg_type == 'sticker')
                               'altText' => 'Rainfall in your location',
                               'contents' =>
                                             array (
-                                              'type' => 'bubble',
-                                              'body' =>
-                                                          array (
-                                                          'type' => 'box',
-                                                          'layout' => 'vertical',
-                                                          'contents' =>
-                                                                      array (
-                                                                      'type' => 'image',
-                                                                      'url' => $stickerurl,
-                                                                      'size' => 'full'
-                                                                      )
-                                                          )
-                                              ),
-                                              'footer' =>
-                                                          array (
-                                                          'type' => 'box',
-                                                          'layout' => 'vertical',
-                                                          'spacing' => 'md',
-                                                          'contents' =>
-                                                                      array (
-                                                                          0 =>
-                                                                          array (
-                                                                          'type' => 'button',
-                                                                          'style'=> 'primary',
-                                                                          'action' =>
-                                                                                    array(
-                                                                                    'type'=> "uri",
-                                                                                    'label'=> "View",
-                                                                                    'uri'=> 'https://google.com'
-                                                                                    ),
-                                                                          ),
-                                                          ),
-                                              ),
+                                                  'type' => 'bubble',
+                                                  'body' =>
+                                                  array (
+                                                    'type' => 'box',
+                                                    'layout' => 'vertical',
+                                                    'contents' =>
+                                                    array (
+                                                      0 =>
+                                                      array (
+                                                        'type' => 'image',
+                                                        'url' => $stickerurl,
+                                                        'size' => 'full',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  'footer' =>
+                                                  array (
+                                                    'type' => 'box',
+                                                    'layout' => 'vertical',
+                                                    'contents' =>
+                                                    array (
+                                                      0 =>
+                                                      array (
+                                                        'type' => 'button',
+                                                        'action' =>
+                                                        array (
+                                                          'type' => 'uri',
+                                                          'label' => 'View',
+                                                          'uri' => 'https://google.com',
+                                                        ),
+                                                        'style' => 'primary',
+                                                        'color' => '#0000ff',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
                                       )
                               )
                           )
