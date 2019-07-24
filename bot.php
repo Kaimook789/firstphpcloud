@@ -74,23 +74,16 @@ elseif ($msg_type == 'sticker')
                               'contents' =>
                                             array (
                                               'type' => 'bubble',
-                                              'hero' =>
-                                                          array (
-                                                          'type' => 'image',
-                                                          'url' => $stickerurl,
-                                                          'size' => 'full'
-                                                          ),
                                               'body' =>
                                                           array (
                                                           'type' => 'box',
                                                           'layout' => 'vertical',
                                                           'contents' =>
                                                                       array (
-                                                                          0 =>
-                                                                          array (
-                                                                          'type' => 'text',
-                                                                          'text' => 'body',
-                                                                          ),
+                                                                      'type' => 'image',
+                                                                      'url' => $stickerurl,
+                                                                      'size' => 'full'
+                                                                      ),
                                                           ),
                                               ),
                                               'footer' =>
