@@ -58,6 +58,13 @@ if ($msg_type == 'location') {
                         'altText' => 'Rainfall your location.',
                         'contents' => array(
                                     'type' => 'bubble',
+                                    'hero' => array
+                                    (
+                                            'type' => 'image',
+                                            'size' => 'full',
+                                            'aspectMode'=>'cover',
+                                            'url' => $stickerurl
+                                     ),
                                     'body' => array
                                      (
                                             'type' => 'box',
@@ -75,11 +82,6 @@ if ($msg_type == 'location') {
                                                 array(
                                                     'type' => 'separator'
                                                 ),
-                                                ////array(
-                                                ////    'type' => 'image',
-                                                ////    'size' => 'full',
-                                                ////    'url' => $stickerurl
-                                                ////),
                                                 array (
                                                   'type' => 'box',
                                                   'layout' => 'vertical',
