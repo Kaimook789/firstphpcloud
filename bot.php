@@ -75,23 +75,23 @@ elseif ($msg_type == 'sticker')
                                     'type' => 'bubble',
                                     'body' => array
                                      (
-                                              'type' => 'box',
-                                              'layout' => 'vertical',
-                                              'contents' =>
+                                            'type' => 'box',
+                                            'layout' => 'vertical',
+                                            'contents' =>
+                                            array(
                                                 array(
-                                                    array(
-                                                      'type' => 'text',
-                                                      'align' => 'center',
-                                                      'color' => '#049b1b',
-                                                      'text' => 'USER : ' . $reline2
-                                                    ),
-                                                    array(
-                                                      'type' => 'image',
-                                                      'size' => '5xl',
-                                                      'align' => 'center',
-                                                      'url' => $stickerurl
-                                                    )
-                                                 )
+                                                    'type' => 'image',
+                                                    'size' => 'full',
+                                                    'align' => 'center',
+                                                    'url' => $stickerurl
+                                                ),
+                                                array(
+                                                    'type' => 'text',
+                                                    'align' => 'center',
+                                                    'color' => '#049b1b',
+                                                    'text' => 'location : '.$msg_latitude+','+ $msg_longitude
+                                                )
+                                             )
                                      ),
                                     'footer' => array
                                      (
