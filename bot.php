@@ -78,18 +78,17 @@ elseif ($msg_type == 'sticker')
                                             'type' => 'box',
                                             'layout' => 'vertical',
                                             'contents' =>
-                                            array(
+                                             array(
                                                 array(
                                                     'type' => 'image',
                                                     'size' => 'full',
-                                                    'align' => 'center',
                                                     'url' => $stickerurl
                                                 ),
                                                 array(
                                                     'type' => 'text',
                                                     'align' => 'center',
                                                     'color' => '#049b1b',
-                                                    'text' => 'location : '.$msg_latitude+','+ $msg_longitude
+                                                    'text' => 'location : '
                                                 )
                                              )
                                      ),
