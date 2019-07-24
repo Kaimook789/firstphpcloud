@@ -63,6 +63,7 @@ if ($msg_type == 'location') {
                                             'type' => 'image',
                                             'size' => 'full',
                                             'aspectMode'=>'cover',
+                                            'aspectRatio'=>'20:5',
                                             'url' => $stickerurl
                                      ),
                                     'body' => array
